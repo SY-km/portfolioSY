@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style type="text/css">
+    #style1{
+      width: 80vw;
+      height : 60vh;
+      margin : 10vh;
+      font-weight : bold;
+      font-family : "Gilroy",Times,serif;
+      font-size : 20vh;
+      line-height : 0vh;
+    }
+
+    </style>
+  </head>
+  <body>
+    <canvas id='myCanvas' width='600' height='500'></canvas>
+    <script type="application/javascript">
+      var canvas = document.getElementById('myCanvas');
+      var ctx = canvas.getContext('2d');
+      var fontsize=50;
+
+      function init(){
+
+      }
+
+      function resizecanvas(){
+        var mywidth = window.innerWidth * 0.8;
+        var myheight = window.innerHeight *0.8;
+        ctx.canvas.width = mywidth;
+        ctx.canvas.height = myheight;
+        ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
+        ctx.stroke();
+      }
+
+      window.addEventListener('resize', resizecanvas , false);
+
+    </script>
+  </body>
+</html>
