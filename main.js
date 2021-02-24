@@ -19,7 +19,7 @@ camera.lookAt(new THREE.Vector3(0, 0, 0));
 loader.setCrossOrigin('anonymous');
 const geometry = new THREE.PlaneGeometry( size*1.168, size, 32 );
 const material = new THREE.MeshPhongMaterial( {color: 0xdddddd, side: THREE.DoubleSide,
-	map: loader.load('https://ibb.co/j6Ddd8K')} );
+	map: loader.load('./images.lightmode.jpg')} );
 const plane = new THREE.Mesh( geometry, material );
 scene.add( plane );
 plane.rotation.x=Math.PI/2;
